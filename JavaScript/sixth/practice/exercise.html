@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <title>Exercise</title>
+</head>
+<body>
+  <script>
+
+    let product={
+      company: 'Adidas',
+      Item: 'Shoes',
+      Price: 9999,
+     'delivery-time': 'Same day',
+
+
+    };
+    // console.log(product);
+    // let prd = product;  
+    // console.log(prd);
+
+
+    //  product={
+    //   company:'Adidas',
+    //   item: 'T-shirt',
+    //   Price: 4899,
+
+
+    // };
+    // console.log(product)
+    // console.log(prd);
+
+    console.log(product['delivery-time']);
+
+    let obj = {
+      message: 'Good Job',
+      status: 'Complete',
+
+    };
+    console.log(obj);
+    let{message, status} = obj;
+    console.log(message);
+    console.log(status);
+
+    function isIdenticalProduct(product1, product2){
+
+      if (typeof product1 !== 'object'|| typeof product1 !== 'object'){
+        console.warn('Parameter passe was not an object');
+        return false;
+      }
+
+      if(product1 == product2){
+        return true;
+      }
+
+      if(product1.Item === product2.Item &&
+        product1.company === product2.company &&
+        product1.Price === product2.Price ){
+          return true;
+
+      
+      }
+      else{
+        return false;
+      }
+
+    }
+
+    let product2={
+      company: 'Adidas',
+      Item: 'T-shirt',
+      Price: 9999,
+     'delivery-time': 'Same day',
+
+    };
+
+
+    let product3={
+      company: 'Adidas',
+      Item: 'Jeans',
+      Price: 8999,
+     'delivery-time': 'Same day',
+
+    };
+
+
+
+    console.log(isIdenticalProduct(product, product2));
+    console.log(isIdenticalProduct(product, ''));
+    console.log(isIdenticalProduct(product, product));
+    console.log(isIdenticalProduct(product3, product2));
+    console.log(isIdenticalProduct(product2, product3));
+
+
+
+
+
+
+
+  </script>
+
+
+</body>
+</html>
